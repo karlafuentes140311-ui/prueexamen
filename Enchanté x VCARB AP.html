@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tienda de Ropa</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:white;
+    padding:40px;
+}
+
+.tienda{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:50px;
+}
+
+.producto{
+    text-align:left;
+}
+
+.producto img{
+    width:100%;
+    height:270px;
+    object-fit:contain;
+    background:white;
+}
+
+.nombre{
+    font-size:30px;
+    margin-top:20px;
+}
+
+.precio{
+    font-size:28px;
+    color:#555;
+    margin:15px 0;
+}
+
+button{
+    width:100%;
+    padding:18px;
+    border:none;
+    background:#efefef;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:black;
+    color:white;
+}
+
+@media(max-width:1200px){
+
+.tienda{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:700px){
+
+.tienda{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<h1>Enchanté x VCARB AP</h1>
+
+<div class="tienda">
+
+<div class="producto">
+<img src="Captura de pantalla 2026-07-09 100629.webp">
+<h2 class="nombre">Enchanté x VCARB AP Sweatpant | Blue</h2>
+<p class="precio">$55.00</p>
+<button>ADD TO CART</button>
+</div>
+
+<div class="producto">
+<img src="Captura de pantalla 2026-07-09 100641.webp">
+<h2 class="nombre">Enchanté x VCARB AP Crewneck | Blue</h2>
+<p class="precio">$40.00</p>
+<button>ADD TO CART</button>
+</div>
+
+<div class="producto">
+<img src="Captura de pantalla 2026-07-09 100657.webp">
+<h2 class="nombre">Enchanté x VCARB AP Sweatpant | Black</h2>
+<p class="precio">$120.00</p>
+<button>ADD TO CART</button>
+</div>
+
+<div class="producto">
+<img src="Captura de pantalla 2026-07-07 095515.webp">
+<h2 class="nombre">Enchanté x VCARB AP Hoodie | Black</h2>
+<p class="precio">$55.00</p>
+<button>ADD TO CART</button>
+</div>
+
+<div class="producto">
+<img src="Captura de pantalla 2026-07-07 085014.webp">
+<h2 class="nombre">Riviera Racing Hat</h2>
+<p class="precio">$40.00</p>
+<button>ADD TO CART</button>
+</div>
+
+<div class="producto">
+<img src="Captura de pantalla 2026-07-07 085030.webp">
+<h2 class="nombre">Enchanté Circuit Series Zip Hoodie</h2>
+<p class="precio">$130.00</p>
+<button>ADD TO CART</button>
+</div>
+
+<div class="producto">
+<img src="Captura de pantalla 2026-07-07 090048.webp">
+<h2 class="nombre">Enchanté Circuit Series Tee</h2>
+<p class="precio">$55.00</p>
+<button>ADD TO CART</button>
+</div>
+
+<div class="producto">
+<img src="Captura de pantalla 2026-07-07 090133.webp">
+<h2 class="nombre">Milkman Hoodie</h2>
+<p class="precio">$120.00</p>
+<button>ADD TO CART</button>
+</div>
+
+</div>
+
+</body>
+</html>
