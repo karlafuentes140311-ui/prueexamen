@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enchanté - Daniel Ricciardo</title>
+    <style>
+        /* --- ESTILOS CSS --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #1a1a1a;
+            background-color: #ffffff;
+            line-height: 1.5;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Sección del Banner Superior */
+        .banner-section {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Sección del Contenido Inferior (Dos Columnas) */
+        .content-section {
+            display: flex;
+            justify-content: space-between;
+            gap: 10%; 
+            padding: 60px 5%; 
+        }
+
+        /* Columna Izquierda: Título */
+        .col-title {
+            flex: 1; 
+        }
+
+        .col-title h1 {
+            font-size: 3.5rem; 
+            font-weight: 900;  
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
+
+        /* Columna Derecha: Texto */
+        .col-text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 24px; 
+            color: #555555; 
+            font-size: 1.1rem;
+        }
+
+        /* Diseño Adaptable para Celulares */
+        @media (max-width: 900px) {
+            .content-section {
+                flex-direction: column; 
+                gap: 40px;
+                padding: 40px 5%;
+            }
+
+            .col-title h1 {
+                font-size: 2.5rem; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- --- ESTRUCTURA HTML --- -->
+    <main class="container">
+        
+        <!-- Banner Superior -->
+        <section class="banner-section">
+            <!-- REEMPLAZA "tu-imagen-de-asientos.jpg" POR LA RUTA DE TU IMAGEN -->
+            <img src="https://enchante.co/cdn/shop/files/L1210324-2_1_1080x.jpg?v=1773080177" alt="Asientos de circuito amarillos y rojos" class="banner-img">
+        </section>
+
+        <!-- Contenido de Texto -->
+        <section class="content-section">
+            
+            <!-- Columna Izquierda -->
+            <div class="col-title">
+                <h1>THE GO-TO BRAND FOR F1, FOUNDED BY DANIEL RICCIARDO.</h1>
+            </div>
+            
+            <!-- Columna Derecha -->
+            <div class="col-text">
+                <p>Founded by F1 legend Daniel Ricciardo, Enchanté reflects the passion that is woven into the fabric of automotive culture. It’s a brand rooted in the belief that the road ahead can take you to some pretty special places, as long as you never forget where you came from.</p>
+                
+                <p>Daniel’s own journey took him from the kart tracks of Australia to the top of the podium in Monaco. Wherever he goes, he always remains true to himself. He infuses an irreverent attitude and infectious joy into every moment, on and off the track. That spirit of the Elegant Bandit shines through in each piece from Enchanté.</p>
+                
+                <p>It doesn't matter if you’re most comfortable under the hood, behind the wheel, or riding shotgun. All that matters is that you</p>
+            </div>
+
+        </section>
+    </main>
+
+</body>
+</html>
