@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tienda de Ropa</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:white;
+    padding:40px;
+}
+
+.tienda{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:50px;
+}
+
+.producto{
+    text-align:left;
+}
+
+.producto img{
+    width:100%;
+    height:400px;
+    object-fit:contain;
+    background:white;
+}
+
+.nombre{
+    font-size:30px;
+    margin-top:20px;
+}
+
+.precio{
+    font-size:28px;
+    color:#555;
+    margin:15px 0;
+}
+
+button{
+    width:100%;
+    padding:18px;
+    border:none;
+    background:#efefef;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:black;
+    color:white;
+}
+
+@media(max-width:1200px){
+
+.tienda{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:700px){
+
+.tienda{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="tienda">
+
+<div class="producto">
+<img src="Captura de pantalla 2026-07-07 090048.webp">
+<h2 class="nombre">Enchanté x VCARB AP Long Sleeve | White</h2>
+<p class="precio">$55.00</p>
+<button>ADD TO CART</button>
+</div>
+
+<div class="producto">
+<img src="Captura de pantalla 2026-07-07 090108.webp">
+<h2 class="nombre">Enchanté x Ford Racing Raptor Rally Long Sleeve Tee</h2>
+<p class="precio">$55.00</p>
+<button>ADD TO CART</button>
+</div>
+
+<div class="producto">
+<img src="Captura de pantalla 2026-07-07 090119.webp">
+<h2 class="nombre">Enchanté x Ford Racing Long Sleeve Tee</h2>
+<p class="precio">$55.00</p>
+<button>ADD TO CART</button>
+</div>
+
+<div class="producto">
+<img src="Captura de pantalla 2026-07-07 090133.webp">
+<h2 class="nombre">Enchanté x VCARBAP Long Sleeve Racing Tee</h2>
+<p class="precio">$55.00</p>
+<button>ADD TO CART</button>
+</div>
+
+<div class="producto">
+<img src="Captura de pantalla 2026-07-07 090144.webp">
+<h2 class="nombre">É Service Long Sleeve Tee</h2>
+<p class="precio">$55.00</p>
+<button>ADD TO CART</button>
+</div>
+
+<div class="producto">
+<img src="Captura de pantalla 2026-07-07 090157.webp">
+<h2 class="nombre">Flower Long Sleeve Tee</h2>
+<p class="precio">$45.00</p>
+<button>ADD TO CART</button>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
