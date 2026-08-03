@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enchanté</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: white;
+}
+
+/* ---------- ENCABEZADO ---------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 80px; 
+    background-color: #fff;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+header > nav, 
+header > .logo-container, 
+header > .icons {
+    flex: 1;
+}
+
+/* ---------- MENÚ DE NAVEGACIÓN (IZQUIERDA) ---------- */
+nav {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 35px; 
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu > li > a {
+    text-decoration: none;
+    color: #000;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 15px 0;
+    display: block;
+}
+
+.menu li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 260px;
+    list-style: none;
+    border: 1px solid #eaeaea;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+    z-index: 100;
+    padding: 10px 0;
+}
+
+.menu li:hover > ul {
+    display: block;
+}
+
+.menu li ul li a {
+    text-decoration: none;
+    color: #555;
+    padding: 12px 20px;
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.menu li ul li a:hover {
+    background: #f9f9f9;
+    color: #000;
+}
+
+/* ---------- LOGO (CENTRO PERFECTO) ---------- */
+.logo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 900; 
+    letter-spacing: -0.5px; 
+    color: #000;
+    text-decoration: none;
+}
+
+/* ---------- ICONOS E INTERFAZ (DERECHA) ---------- */
+.icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 25px; 
+}
+
+.icons a {
+    color: #000;
+    text-decoration: none;
+    font-size: 22px; 
+    display: flex;
+    align-items: center;
+}
+
+.icons .fa-user, .icons .fa-magnifying-glass {
+    font-weight: 300; 
+}
+
+/* ---------- BOTÓN DEL CARRITO ---------- */
+.cart-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.cart-text {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #002d62; 
+}
+
+.cart-count {
+    width: 38px;
+    height: 38px;
+    border: 1px solid #999; 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* ---------- SECCIÓN HERO / SOBRE DANIEL ---------- */
+.about-section {
+    display: flex;
+    width: 100%;
+    min-height: calc(100vh - 90px); /* Ocupa el resto de la pantalla visible */
+}
+
+/* Bloque Izquierdo: Imagen */
+.about-image {
+    flex: 1;
+    background-image: url('https://enchante.co/cdn/shop/files/L1210324-2_1_1080x.jpg?v=1773080177'); /* REEMPLAZA AQUÍ por el nombre o ruta de tu archivo de imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Bloque Derecho: Texto */
+.about-content {
+    flex: 1;
+    background-color: #ededed; /* Color gris claro de fondo idéntico al banner */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 80px;
+}
+
+.about-content h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #1a2530; /* Tono oscuro del título */
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.about-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+    max-width: 540px; /* Evita que las líneas de texto sean demasiado largas */
+    margin-bottom: 35px;
+}
+
+.about-link {
+    font-size: 13px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #000; /* Línea de subrayado elegante */
+    padding-bottom: 4px;
+}
+
+.about-link:hover {
+    color: #555;
+    border-color: #555;
+}
+
+/* Ajuste responsivo para pantallas pequeñas */
+@media (max-width: 900px) {
+    .about-section {
+        flex-direction: column;
+    }
+    .about-image {
+        min-height: 400px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <nav>
+        <ul class="menu">
+         
+            
+            <li>
+                <a href="">SHOP</a>
+                <ul>
+                    <li><a href="playera.html">VER TODO</a></li>
+                    <li><a href="playeras%202.html">CAMISETAS DE MANGA LARGA</a></li>
+                    <li><a href="sudaderas.html">SUDADERAS CON CAPUCHA</a></li>
+                    <li><a href="accesorios.html">ACCESORIOS</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">COLLECTIONS</a>
+                <ul>
+                    <li><a href="Daytona%20Thunder.html">Daytona Thunder</a></li>
+                    <li><a href="Enchant%C3%A9%20x%20VCARB%20AP.html">Enchanté x VCARB AP</a></li>
+                    <li><a href="Enchant%C3%A9%20x%20Ford%20Racing.html">Enchanté x Ford Racing </a></li>
+                </ul>
+            </li>
+
+
+        </ul>
+    </nav>
+
+    <div class="logo-container">
+        <a href="#" class="logo">ENCHANTÉ</a>
+    </div>
+
+    <div class="icons">
+        <a href="#"><i class="fa-regular fa-user"></i></a>
+        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        
+        <a href="#" class="cart-link">
+            <span class="cart-text">CART</span>
+            <span class="cart-count">0</span>
+        </a>
+    </div>
+
+</header>
+
+<section class="about-section">
+    
+    <div class="about-image"></div>
+    
+    <div class="about-content">
+        <h1>FOUNDED BY DANIEL RICCIARDO</h1>
+        <p>Enchanté is a lifestyle brand that brings a refreshing energy to F1 through aspirational design, elevated quality, and unmistakable style.</p>
+        <a href="file:///C:/Users/karla/Desktop/DISE%C3%91O%20WEB/galeria/pagina%205.html#" class="about-link">ABOUT ENCHANTÉ</a>
+    </div>
+
+</section>
+
+</body>
+</html>
